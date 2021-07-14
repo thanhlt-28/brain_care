@@ -76,7 +76,7 @@ Route::prefix('/')->group(function () {
         //........Nghiện rượu
         Route::get('ket-qua-nr', [DianoseController::class, 'index_ngruou'])->name('nghien-ruou.views');
         Route::get('them-chan-doan-nr', [DianoseController::class, 'create_ngruou'])->name('nghien-ruou.create');
-        Route::post('luu-lai-nr', [DianoseController::class, 'store_ngruou'])->name('nghien-ruou.store');
+        Route::post('luu-lai-nr', [DianoseController::class, 'store'])->name('nghien-ruou.store');
         Route::get('xoa-ket-qua-nr/{id}', [DianoseController::class, 'destroy_ngruou'])->name('nghien-ruou.destroy');
         Route::get('nghien-ruou/{id}', [DianoseController::class, 'detail_ngruou'])->name('nghien-ruou.index');
         Route::get('don-thuoc-nr/{id}', [DianoseController::class, 'thuocnghienruou'])->name('nghien-ruou.viewer');
@@ -84,8 +84,9 @@ Route::prefix('/')->group(function () {
         //........Mất trí
         Route::get('ket-qua-mattri', [DianoseController::class, 'index_mattri'])->name('mat-tri.views');
         Route::get('them-chan-doan-mattri', [DianoseController::class, 'create_mattri'])->name('mat-tri.create');
-        Route::post('luu-lai-mattri', [DianoseController::class, 'store_mattri'])->name('mat-tri.store');
+        Route::post('luu-lai-mattri', [DianoseController::class, 'store'])->name('mat-tri.store');
         Route::get('xoa-ket-qua-mattri/{id}', [DianoseController::class, 'destroy_mattri'])->name('mat-tri.destroy');
+        Route::get('don-thuoc-mattri/{id}', [DianoseController::class, 'thuocmattri'])->name('mat-tri.viewer');
         Route::get('ket-qua-mattri/{id}', [DianoseController::class, 'detail_mattri'])->name('mat-tri.index');
         Route::post('ket-qua-mattri/{id}', [DianoseController::class, 'update_mattri'])->name('mat-tri.update');
         //........Loạn thần
@@ -93,6 +94,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-loanthan', [DianoseController::class, 'create_lthan'])->name('loan-than.create');
         Route::post('luu-lai-loanthan', [DianoseController::class, 'store_lthan'])->name('loan-than.store');
         Route::get('xoa-ket-qua-loanthan/{id}', [DianoseController::class, 'destroy_lthan'])->name('loan-than.destroy');
+        Route::get('don-thuoc-loanthan/{id}', [DianoseController::class, 'thuoc_lthan'])->name('loan-than.viewer');
         Route::get('ket-qua-loanthan/{id}', [DianoseController::class, 'detail_lthan'])->name('loan-than.index');
         Route::post('ket-qua-loanthan/{id}', [DianoseController::class, 'update_lthan'])->name('loan-than.update');
         //........Lo âu
@@ -100,6 +102,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-lo-au', [DianoseController::class, 'create_loau'])->name('lo-au.create');
         Route::post('luu-lai-lo-au', [DianoseController::class, 'store_loau'])->name('lo-au.store');
         Route::get('xoa-ket-qua-lo-au/{id}', [DianoseController::class, 'destroy_loau'])->name('lo-au.destroy');
+        Route::get('don-thuoc-lo-au/{id}', [DianoseController::class, 'thuoc_loau'])->name('lo-au.viewer');
         Route::get('ket-qua-lo-au/{id}', [DianoseController::class, 'detail_loau'])->name('lo-au.index');
         Route::post('ket-qua-lo-au/{id}', [DianoseController::class, 'update_loau'])->name('lo-au.update');
         //........Hưng cảm
@@ -107,6 +110,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-hung-cam', [DianoseController::class, 'create_hcam'])->name('hung-cam.create');
         Route::post('luu-lai-hung-cam', [DianoseController::class, 'store_hcam'])->name('hung-cam.store');
         Route::get('xoa-ket-qua-hung-cam/{id}', [DianoseController::class, 'destroy_hcam'])->name('hung-cam.destroy');
+        Route::get('don-thuoc-hung-cam/{id}', [DianoseController::class, 'thuoc_hcam'])->name('hung-cam.viewer');
         Route::get('ket-qua-hung-cam/{id}', [DianoseController::class, 'detail_hcam'])->name('hung-cam.index');
         Route::post('ket-qua-hung-cam/{id}', [DianoseController::class, 'update_hcam'])->name('hung-cam.update');
         //........Hoảng loạn
@@ -114,6 +118,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-hoang-loan', [DianoseController::class, 'create_hloan'])->name('hoang-loan.create');
         Route::post('luu-lai-hoang-loan', [DianoseController::class, 'store_hloan'])->name('hoang-loan.store');
         Route::get('xoa-ket-qua-hoang-loan/{id}', [DianoseController::class, 'destroy_hloan'])->name('hoang-loan.destroy');
+        Route::get('don-thuoc-hoang-loan/{id}', [DianoseController::class, 'thuoc_hloan'])->name('hoang-loan.viewer');
         Route::get('ket-qua-hoang-loan/{id}', [DianoseController::class, 'detail_hloan'])->name('hoang-loan.index');
         Route::post('ket-qua-hoang-loan/{id}', [DianoseController::class, 'update_hloan'])->name('hoang-loan.update');
         //........Động kinh
@@ -121,6 +126,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-dong-kinh', [DianoseController::class, 'create_dongkinh'])->name('dong-kinh.create');
         Route::post('luu-lai-dong-kinh', [DianoseController::class, 'store_dongkinh'])->name('dong-kinh.store');
         Route::get('xoa-ket-qua-dong-kinh/{id}', [DianoseController::class, 'destroy_dongkinh'])->name('dong-kinh.destroy');
+        Route::get('don-thuoc-dong-kinh/{id}', [DianoseController::class, 'thuoc_dongkinh'])->name('dong-kinh.viewer');
         Route::get('ket-qua-dong-kinh/{id}', [DianoseController::class, 'detail_dongkinh'])->name('dong-kinh.index');
         Route::post('ket-qua-dong-kinh/{id}', [DianoseController::class, 'update_dongkinh'])->name('dong-kinh.update');
         //........Ám ảnh
@@ -128,6 +134,7 @@ Route::prefix('/')->group(function () {
         Route::get('them-chan-doan-am-anh', [DianoseController::class, 'create_amanh'])->name('am-anh.create');
         Route::post('luu-lai-am-anh', [DianoseController::class, 'store_amanh'])->name('am-anh.store');
         Route::get('xoa-ket-qua-am-anh/{id}', [DianoseController::class, 'destroy_amanh'])->name('am-anh.destroy');
+        Route::get('don-thuoc-am-anh/{id}', [DianoseController::class, 'thuoc_amanh'])->name('am-anh.viewer');
         Route::get('ket-qua-am-anh/{id}', [DianoseController::class, 'detail_amanh'])->name('am-anh.index');
         Route::post('ket-qua-am-anh/{id}', [DianoseController::class, 'update_amanh'])->name('am-anh.update');
     });

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-wraper" id="prescription">
-    <form class="mt-3 ml-5 mr-5" action="{{route('nghien-ruou.update', $model->id)}}" method="POST" enctype="multipart/form-data">
+    <form class="mt-3 ml-5 mr-5" action="{{route('loan-than.update', $model->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -88,7 +88,7 @@
 </div>
 <div class="card-title">
     <input type="button" class="btn btn-primary" onclick="printPre('prescription')" value="In đơn thuốc" />
-    <a class="btn btn-success" href="{{route('nghien-ruou.views')}}"> Trở lại</a>
+    <a class="btn btn-success" href="{{route('loan-than.views')}}"> Trở lại</a>
 </div>
 
 

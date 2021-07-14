@@ -362,12 +362,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-center"> -->
-                <!-- <input class="btn btn-info" type="submit" value="Nhận&rlarr;"></input> -->
-                <!-- <a href="{{route('tram-cam.views')}}" class="btn btn-primary">Trở lại</a> -->
-                <!-- <button type="submit" class="btn btn-success" id="submitBtn">Lưu</button> -->
-                <!-- </div> -->
-
         </div>
 
         <div class="tab-pane ml-5 fade show" id="tab1" role="tabpanel" aria-labelledby="home-tab">
@@ -1012,4 +1006,5 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.css"></script>
         </div>
     </div>
-    @endsection
+</div>
+@endsection

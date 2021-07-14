@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div class="container-wraper">
     <script type="text/javascript">
         var kc = ["", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", 0, 0, 0, 0];
@@ -111,41 +111,62 @@
                     <h4>Thông tin chẩn đoán</h4>
                 </div>
                 <div class="card-body">
-                    <table class="table">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Họ tên</th>
-                                <th>Số điện thoại</th>
-                                <th>Email</th>
-                                <th>Năm sinh</th>
-                                <th>Địa chỉ</th>
-                                <th>Kết quả</th>
-                                <th>
-                                    <a href="{{ route('am-anh.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($cust as $item)
-                            <tr>
-                                <td>{{ $item->cust_name }}</td>
-                                <td>{{ $item->phone }}</td>
-                                <td>{{ $item->cust_email }}</td>
-                                <td>{{ $item->cust_dob }}</td>
-                                <td>{{ $item->cust_address }}</td>
-                                <td>{{ $item->result }}</td>
-                                <td>
-                                    <a class="btn btn-info" href="{{route('am-anh.index', $item->id)}}">Xem chi tiết</a>
-                                    <a class="btn btn-warning" href="{{route('am-anh.destroy', ['id' => $item->id])}}">Xóa</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="single-content brand webdesign grid-item">
+                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Tìm kiếm theo SĐT...">
+                        <script>
+                            $(document).ready(function() {
+                                $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+                        </script>
+                        <table id="dtStatusSent" class="table table-hover" cellspacing="0" width="100%">
+
+                            <thead class="table-light">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Họ tên</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Năm sinh</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Kết quả</th>
+                                    <th>Đơn thuốc</th>
+                                    <th>
+                                        <a href="{{ route('am-anh.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="myTable">
+                                @foreach($cust as $item)
+                                <tr>
+                                    <td> {{$index++}}</td>
+                                    <td>{{ $item->cust_name }}</td>
+                                    <td>{{ $item->phone }}</td>
+                                    <td>{{ $item->cust_email }}</td>
+                                    <td>{{ $item->cust_dob }}</td>
+                                    <td>{{ $item->cust_address }}</td>
+                                    <td>{{ $item->result }}</td>
+                                    <td>
+                                        <a class="modal-lg" data-bs-toggle="modal-lg" data-bs-target="#exampleModal" href="{{route('am-anh.viewer', $item->id)}}">Đơn thuốc</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-info" href="{{route('am-anh.index', $item->id)}}">Xem chi tiết</a>
+                                        <a class="btn btn-warning" href="{{route('am-anh.destroy', ['id' => $item->id])}}">Xóa</a>
+                                    </td>
+
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 @endsection

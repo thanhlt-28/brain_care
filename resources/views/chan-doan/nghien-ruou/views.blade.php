@@ -91,8 +91,18 @@
                 </div>
                 <div class="card-body">
                     <div class="single-content brand webdesign grid-item">
-                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Search..">
-
+                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Tìm kiếm theo SĐT...">
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+                        </script>
                         <table id="dtStatusSent" class="table table-hover" cellspacing="0" width="100%">
 
                             <thead class="table-light">
@@ -134,23 +144,6 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                            <!-- <tfoot>
-                                <tr>
-                                    <th></th>
-                                    <th>Họ tên</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Email</th>
-                                    <th>Năm sinh</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Kết quả</th>
-                                    <th>
-                                        <a href="{{ route('nghien-ruou.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
-                                    </th>
-                                    <th>
-                                        <button class="btn btn-success">Thuốc</button>
-                                    </th>
-                                </tr>
-                            </tfoot> -->
                         </table>
                     </div>
                 </div>
@@ -158,15 +151,5 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
 
 @endsection

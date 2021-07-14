@@ -51,7 +51,7 @@ class DianoseController extends Controller
         $dia->cust_name = $pre_name;
         $dia->fill($request->all());
         $dia['symptom'] = implode(", ", $dia['symptom']);
-        // $dia->save();
+        $dia->save();
         // dd($dia);
 
         // ==== Tạo và lưu đơn thuốc ====
@@ -68,10 +68,10 @@ class DianoseController extends Controller
             $p->Type = $Type[$i];
             $p->Amount = $Amount[$i];
             $p->Treatment = $Treatment[$i];
-            // $p->save();
+            $p->save();
         }
-        dd($p);
-        // return redirect(route('tram-cam.views'));
+        // dd($p);
+        return redirect(route('tram-cam.views'));
     }
     public function thuoctramcam($CustID, Request $request, Prescription $pres)
     {
@@ -81,14 +81,7 @@ class DianoseController extends Controller
         //return $pres;
         return view('chan-doan.tram-cam.viewer', compact('model', 'pres'));
     }
-    public function thuocnghienruou($CustID, Request $request, Prescription $pres)
-    {
-        $model = Dianose::find($CustID);
-        $custs = $model->CustID;
-        $pres = Prescription::where('CustID', "like", $custs)->get();
-        //return $pres;
-        return view('chan-doan.nghien-ruou.viewer', compact('model', 'pres'));
-    }
+
     public function detail($id)
     {
         //==== Edit
@@ -139,7 +132,13 @@ class DianoseController extends Controller
         $model['symptom'] = explode("value", $model['symptom']);
         return view('chan-doan.nghien-ruou.index', ['model' => $model]);
     }
-
+    public function thuocnghienruou($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.nghien-ruou.viewer', compact('model', 'pres'));
+    }
     public function update_ngruou(Request $request, $id)
     {
         $model = Dianose::find($id);
@@ -174,7 +173,13 @@ class DianoseController extends Controller
         Dianose::create($input);
         return redirect(route('mat-tri.views'));
     }
-
+    public function thuocmattri($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.mat-tri.viewer', compact('model', 'pres'));
+    }
     public function detail_mattri($id, Request $request)
     {
         //==== Edit
@@ -225,7 +230,13 @@ class DianoseController extends Controller
         $model['symptom'] = explode("value", $model['symptom']);
         return view('chan-doan.loan-than.index', ['model' => $model]);
     }
-
+    public function thuoc_lthan($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.loan-than.viewer', compact('model', 'pres'));
+    }
     public function update_lthan(Request $request, $id)
     {
         $model = Dianose::find($id);
@@ -260,7 +271,13 @@ class DianoseController extends Controller
         Dianose::create($input);
         return redirect(route('lo-au.views'));
     }
-
+    public function thuoc_loau($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.loan-than.viewer', compact('model', 'pres'));
+    }
     public function detail_loau($id, Request $request)
     {
         //==== Edit
@@ -311,7 +328,13 @@ class DianoseController extends Controller
         $model['symptom'] = explode("value", $model['symptom']);
         return view('chan-doan.hung-cam.index', ['model' => $model]);
     }
-
+    public function thuoc_hcam($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.loan-than.viewer', compact('model', 'pres'));
+    }
     public function update_hcam(Request $request, $id)
     {
         $model = Dianose::find($id);
@@ -346,7 +369,13 @@ class DianoseController extends Controller
         Dianose::create($input);
         return redirect(route('hoang-loan.views'));
     }
-
+    public function thuoc_hloan($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.hoang-loan.viewer', compact('model', 'pres'));
+    }
     public function detail_hloan($id, Request $request)
     {
         //==== Edit
@@ -397,7 +426,13 @@ class DianoseController extends Controller
         $model['symptom'] = explode("value", $model['symptom']);
         return view('chan-doan.dong-kinh.index', ['model' => $model]);
     }
-
+    public function thuoc_dongkinh($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.dong-kinh.viewer', compact('model', 'pres'));
+    }
     public function update_dongkinh(Request $request, $id)
     {
         $model = Dianose::find($id);
@@ -440,7 +475,13 @@ class DianoseController extends Controller
         $model['symptom'] = explode("value", $model['symptom']);
         return view('chan-doan.am-anh.index', ['model' => $model]);
     }
-
+    public function thuoc_amanh($CustID, Request $request, Prescription $pres)
+    {
+        $model = Dianose::find($CustID);
+        $custs = $model->CustID;
+        $pres = Prescription::where('CustID', "like", $custs)->get();
+        return view('chan-doan.am-anh.viewer', compact('model', 'pres'));
+    }
     public function update_amanh(Request $request, $id)
     {
         $model = Dianose::find($id);

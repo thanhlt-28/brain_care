@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-wraper" id="prescription">
-    <form class="mt-3 ml-5 mr-5" action="{{route('nghien-ruou.update', $model->id)}}" method="POST" enctype="multipart/form-data">
+    <form class="mt-3 ml-5 mr-5" action="{{route('hung-cam.update', $model->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -16,8 +16,7 @@
                                     </div>
                                     <div class="col-md-9">
                                         <strong>Trung tâm chăm sóc sức khỏe tinh thần Braincare</strong>
-                                        <p>Địa chỉ: Tầng 7, Toà nhà 59 Võ Chí Công, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà
-                                            Nội, Việt Nam</p>
+                                        <p>Địa chỉ: Tầng 7, Toà nhà 59 Võ Chí Công, P. Nghĩa Đô, Q. Cầu Giấy, Tp. Hà Nội, Việt Nam</p>
                                     </div>
                                 </div>
                             </div>
@@ -88,10 +87,8 @@
 </div>
 <div class="card-title">
     <input type="button" class="btn btn-primary" onclick="printPre('prescription')" value="In đơn thuốc" />
-    <a class="btn btn-success" href="{{route('nghien-ruou.views')}}"> Trở lại</a>
+    <a class="btn btn-success" href="{{route('hung-cam.views')}}"> Trở lại</a>
 </div>
-
-
 
 <!-- SCRIPT PRINT -->
 <script>

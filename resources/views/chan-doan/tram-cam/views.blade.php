@@ -2,7 +2,6 @@
 @section('content')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <div class="container-wraper">
     <script type="text/javascript">
@@ -191,8 +190,17 @@
                 </div>
                 <div class="card-body">
                     <div class="single-content brand webdesign grid-item">
-                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Search..">
-
+                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Tìm kiếm theo SĐT...">
+                        <script>
+                            $(document).ready(function() {
+                                $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+                        </script>
                         <table id="dtStatusSent" class="table table-hover" cellspacing="0" width="100%">
 
                             <thead class="table-light">
@@ -223,24 +231,6 @@
                                     <td>{{ $item->result }}</td>
                                     <td>
                                         <a class="modal-lg" data-bs-toggle="modal-lg" data-bs-target="#exampleModal" href="{{route('tram-cam.viewer', $item->id)}}">Đơn thuốc</a>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </td>
                                     <td>
                                         <a class="btn btn-info" href="{{route('tram-cam.index', $item->id)}}">Xem chi tiết</a>
@@ -250,23 +240,6 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                            <!-- <tfoot>
-                                <tr>
-                                    <th></th>
-                                    <th>Họ tên</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Email</th>
-                                    <th>Năm sinh</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Kết quả</th>
-                                    <th>
-                                        <a href="{{ route('tram-cam.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
-                                    </th>
-                                    <th>
-                                        <button class="btn btn-success">Thuốc</button>
-                                    </th>
-                                </tr>
-                            </tfoot> -->
                         </table>
                     </div>
                 </div>
@@ -274,15 +247,6 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
+
 
 @endsection
