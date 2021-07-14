@@ -1,0 +1,88 @@
+{
+    "medicine": [
+        {
+            "id": 5,
+            "name": "Monster Ultra Gold",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798581853?alt=media&token=3f5d7b8f-8125-466e-b1e4-7e6484a5dddc",
+            "grouptype": "Nước uống năng lượng",
+            "market": "Monster là loại thức uống cao cấp được sử dụng và ưa chuộng bởi chính các vận động viên, nghệ sĩ, các ban nhạc trẻ, sinh viên và những người yêu thích mạo hiểm, khám phá, Monster Energy hứa hẹn sẽ đem lại một trải nghiệm mới về sản phẩm nước tăng lực cho người tiêu dùng Việt Nam. Nước tăng lực Monster đã trở thành một biểu tượng toàn cầu và là nhãn hiệu nước tăng lực luôn nằm trong top những sản phẩm được ưa chuộng bậc nhất trên thế giới.",
+            "begin": 29000,
+            "treatment": 5,
+            "national": 3
+        },
+        {
+            "id": 6,
+            "name": "Nước tăng lực",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798524012?alt=media&token=a2768f3c-0463-4ed6-b9fe-0b66dcdfdd6b",
+            "grouptype": "2344423",
+            "market": "243433",
+            "begin": 12000,
+            "treatment": 6,
+            "national": 2
+        },
+        {
+            "id": 7,
+            "name": "Bia hơi 333",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798476703?alt=media&token=a019f9c8-f439-4d1b-b708-bb2222ed10eb",
+            "grouptype": "33234324234",
+            "market": "234234234243rewfef",
+            "begin": 122222,
+            "treatment": 3,
+            "national": 1
+        },
+        {
+            "id": 8,
+            "name": "Nước uống Monster Zero",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618799321715?alt=media&token=e39fb5c0-f6b3-4fe5-9d10-e9887962a320",
+            "grouptype": "23444234",
+            "market": "432424234324324",
+            "begin": 34344,
+            "treatment": 7,
+            "national": 4
+        },
+        {
+            "id": 9,
+            "treatment": "6",
+            "name": "Monster Ultra Red",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798612874?alt=media&token=591108fa-f933-42b7-97df-6a3b89291b99",
+            "grouptype": "Monster Energy",
+            "market": "Monster là loại thức uống cao cấp được sử dụng và ưa chuộng bởi chính các vận động viên, nghệ sĩ, các ban nhạc trẻ, sinh viên và những người yêu thích mạo hiểm, khám phá, Monster Energy hứa hẹn sẽ đem lại một trải nghiệm mới về sản phẩm nước tăng lực cho người tiêu dùng Việt Nam. Nước tăng lực Monster đã trở thành một biểu tượng toàn cầu và là nhãn hiệu nước tăng lực luôn nằm trong top những sản phẩm được ưa chuộng bậc nhất trên thế giới.",
+            "begin": 23000,
+            "national": "1",
+            "created_at": "",
+            "updated_at": ""
+        },
+        {
+            "id": 10,
+            "treatment": "6",
+            "name": "Monster Ultra Gold",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798694516?alt=media&token=0ce8e648-60a0-46f8-b23d-bafc56ce10e1",
+            "grouptype": "Nước uống tăng lực",
+            "market": "Monster là loại thức uống cao cấp được sử dụng và ưa chuộng bởi chính các vận động viên, nghệ sĩ, các ban nhạc trẻ, sinh viên và những người yêu thích mạo hiểm, khám phá, Monster Energy hứa hẹn sẽ đem lại một trải nghiệm mới về sản phẩm nước tăng lực cho người tiêu dùng Việt Nam. Nước tăng lực Monster đã trở thành một biểu tượng toàn cầu và là nhãn hiệu nước tăng lực luôn nằm trong top những sản phẩm được ưa chuộng bậc nhất trên thế giới.",
+            "begin": 23400,
+            "national": "5",
+            "created_at": "",
+            "updated_at": ""
+        },
+        {
+            "id": 11,
+            "name": "Nước uống năng lượng",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1618798804349?alt=media&token=0766d14a-d49d-4039-a4f8-126eca1f743e",
+            "grouptype": "Energy cod",
+            "market": "Monster là loại thức uống cao cấp được sử dụng và ưa chuộng bởi chính các vận động viên, nghệ sĩ, các ban nhạc trẻ, sinh viên và những người yêu thích mạo hiểm, khám phá, Monster Energy hứa hẹn sẽ đem lại một trải nghiệm mới về sản phẩm nước tăng lực cho người tiêu dùng Việt Nam. Nước tăng lực Monster đã trở thành một biểu tượng toàn cầu và là nhãn hiệu nước tăng lực luôn nằm trong top những sản phẩm được ưa chuộng bậc nhất trên thế giới.",
+            "begin": 14000,
+            "treatment": 7,
+            "national": 2
+        },
+        {
+            "id": 12,
+            "name": "Monster Ultra Gold",
+            "type": "https://firebasestorage.googleapis.com/v0/b/angular-bdea1.appspot.com/o/Uploads%2F1619360046530?alt=media&token=caf15536-f452-41c0-bfba-8d4b4d442b86",
+            "grouptype": "Năng lượng",
+            "market": "A software platform used for building applications based on containers — small and lightweight execution environments.",
+            "begin": 23000,
+            "treatment": 4,
+            "national": 6
+        }
+    ]
+}
