@@ -150,7 +150,6 @@
                 <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
                     <i class="align-middle" data-feather="settings"></i>
                 </a>
-
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
                     <img src="{{asset('assets/img/admin.ico')}}" class="avatar img-fluid rounded mr-1" alt="user" /> <span class="text-dark">{{Auth::user()->name}}</span>
                 </a>

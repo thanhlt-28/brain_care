@@ -92,7 +92,7 @@ Route::prefix('/')->group(function () {
         //........Loạn thần
         Route::get('ket-qua-loanthan', [DianoseController::class, 'index_lthan'])->name('loan-than.views');
         Route::get('them-chan-doan-loanthan', [DianoseController::class, 'create_lthan'])->name('loan-than.create');
-        Route::post('luu-lai-loanthan', [DianoseController::class, 'store_lthan'])->name('loan-than.store');
+        Route::post('luu-lai-loanthan', [DianoseController::class, 'store'])->name('loan-than.store');
         Route::get('xoa-ket-qua-loanthan/{id}', [DianoseController::class, 'destroy_lthan'])->name('loan-than.destroy');
         Route::get('don-thuoc-loanthan/{id}', [DianoseController::class, 'thuoc_lthan'])->name('loan-than.viewer');
         Route::get('ket-qua-loanthan/{id}', [DianoseController::class, 'detail_lthan'])->name('loan-than.index');
@@ -100,7 +100,7 @@ Route::prefix('/')->group(function () {
         //........Lo âu
         Route::get('ket-qua-lo-au', [DianoseController::class, 'index_loau'])->name('lo-au.views');
         Route::get('them-chan-doan-lo-au', [DianoseController::class, 'create_loau'])->name('lo-au.create');
-        Route::post('luu-lai-lo-au', [DianoseController::class, 'store_loau'])->name('lo-au.store');
+        Route::post('luu-lai-lo-au', [DianoseController::class, 'store'])->name('lo-au.store');
         Route::get('xoa-ket-qua-lo-au/{id}', [DianoseController::class, 'destroy_loau'])->name('lo-au.destroy');
         Route::get('don-thuoc-lo-au/{id}', [DianoseController::class, 'thuoc_loau'])->name('lo-au.viewer');
         Route::get('ket-qua-lo-au/{id}', [DianoseController::class, 'detail_loau'])->name('lo-au.index');
@@ -108,7 +108,7 @@ Route::prefix('/')->group(function () {
         //........Hưng cảm
         Route::get('ket-qua-hung-cam', [DianoseController::class, 'index_hcam'])->name('hung-cam.views');
         Route::get('them-chan-doan-hung-cam', [DianoseController::class, 'create_hcam'])->name('hung-cam.create');
-        Route::post('luu-lai-hung-cam', [DianoseController::class, 'store_hcam'])->name('hung-cam.store');
+        Route::post('luu-lai-hung-cam', [DianoseController::class, 'store'])->name('hung-cam.store');
         Route::get('xoa-ket-qua-hung-cam/{id}', [DianoseController::class, 'destroy_hcam'])->name('hung-cam.destroy');
         Route::get('don-thuoc-hung-cam/{id}', [DianoseController::class, 'thuoc_hcam'])->name('hung-cam.viewer');
         Route::get('ket-qua-hung-cam/{id}', [DianoseController::class, 'detail_hcam'])->name('hung-cam.index');
@@ -116,7 +116,7 @@ Route::prefix('/')->group(function () {
         //........Hoảng loạn
         Route::get('ket-qua-hoang-loan', [DianoseController::class, 'index_hloan'])->name('hoang-loan.views');
         Route::get('them-chan-doan-hoang-loan', [DianoseController::class, 'create_hloan'])->name('hoang-loan.create');
-        Route::post('luu-lai-hoang-loan', [DianoseController::class, 'store_hloan'])->name('hoang-loan.store');
+        Route::post('luu-lai-hoang-loan', [DianoseController::class, 'store'])->name('hoang-loan.store');
         Route::get('xoa-ket-qua-hoang-loan/{id}', [DianoseController::class, 'destroy_hloan'])->name('hoang-loan.destroy');
         Route::get('don-thuoc-hoang-loan/{id}', [DianoseController::class, 'thuoc_hloan'])->name('hoang-loan.viewer');
         Route::get('ket-qua-hoang-loan/{id}', [DianoseController::class, 'detail_hloan'])->name('hoang-loan.index');
@@ -124,7 +124,7 @@ Route::prefix('/')->group(function () {
         //........Động kinh
         Route::get('ket-qua-dong-kinh', [DianoseController::class, 'index_dongkinh'])->name('dong-kinh.views');
         Route::get('them-chan-doan-dong-kinh', [DianoseController::class, 'create_dongkinh'])->name('dong-kinh.create');
-        Route::post('luu-lai-dong-kinh', [DianoseController::class, 'store_dongkinh'])->name('dong-kinh.store');
+        Route::post('luu-lai-dong-kinh', [DianoseController::class, 'store'])->name('dong-kinh.store');
         Route::get('xoa-ket-qua-dong-kinh/{id}', [DianoseController::class, 'destroy_dongkinh'])->name('dong-kinh.destroy');
         Route::get('don-thuoc-dong-kinh/{id}', [DianoseController::class, 'thuoc_dongkinh'])->name('dong-kinh.viewer');
         Route::get('ket-qua-dong-kinh/{id}', [DianoseController::class, 'detail_dongkinh'])->name('dong-kinh.index');
@@ -132,7 +132,7 @@ Route::prefix('/')->group(function () {
         //........Ám ảnh
         Route::get('ket-qua-am-anh', [DianoseController::class, 'index_amanh'])->name('am-anh.views');
         Route::get('them-chan-doan-am-anh', [DianoseController::class, 'create_amanh'])->name('am-anh.create');
-        Route::post('luu-lai-am-anh', [DianoseController::class, 'store_amanh'])->name('am-anh.store');
+        Route::post('luu-lai-am-anh', [DianoseController::class, 'store'])->name('am-anh.store');
         Route::get('xoa-ket-qua-am-anh/{id}', [DianoseController::class, 'destroy_amanh'])->name('am-anh.destroy');
         Route::get('don-thuoc-am-anh/{id}', [DianoseController::class, 'thuoc_amanh'])->name('am-anh.viewer');
         Route::get('ket-qua-am-anh/{id}', [DianoseController::class, 'detail_amanh'])->name('am-anh.index');
@@ -219,7 +219,7 @@ Route::prefix('/')->group(function () {
 
 Route::prefix('/admin')->middleware('check-admin-role')->group(function () {
     Route::get('/', function () {
-        return view('admin.dashboard');
+        return view('auth.dashboard');
     })->name('dashboard');
     Route::prefix('cates')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('cates.index');

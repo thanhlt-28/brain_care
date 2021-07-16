@@ -116,12 +116,6 @@
                         <a href="{{ route('login') }}" class="text-sm underline">Login</a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="text-white">
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="text-sm underline">Register</a>
-                    </div>
-                </div>
             </div>
             @endif
             @endauth

@@ -6,9 +6,9 @@
 
 <link rel="stylesheet" href="{{asset('assets/scss/css/style.css')}}">
 <!-- <link rel="stylesheet" href="{{asset('assets/css/login.css')}}"> -->
-<link rel="stylesheet" href="{{asset('assets/scss/css/background-variant.scss')}}">
+<!-- <link rel="stylesheet" href="{{asset('assets/scss/css/background-variant.scss')}}"> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<meta name="keywords" content="Space Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<!-- <meta name="keywords" content="Space Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" /> -->
 <!-- Online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 <!-- //Online-fonts -->

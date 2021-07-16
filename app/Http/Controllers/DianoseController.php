@@ -294,7 +294,7 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('lo-au.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_loau($id, $input)
+    public function destroy_loau($id)
     {
         $model = Dianose::findOrFail($id);
         $model->delele();

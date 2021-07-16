@@ -92,55 +92,46 @@
                 </li>
             </ul>
         </li>
+
     </ul>
-    </li>
     <li><a href="{{route('news')}}">Tin tức</a>
         <ul>
             <li><a href="{{route('getallfields')}}">Thực tập sinh chuyên đề</a></li>
             <li><a href="#">Sản xuất phần mềm</a></li>
         </ul>
     </li>
-    <li style="border-right: 1px solid white;"><a href="{{route('contact')}}">Liên hệ</a></li>
-    <!-- Icon header -->
-    <div class="wrap-icon-header flex-w flex-r-m">
-        <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-            <i class="zmdi zmdi-search"></i>
-        </div>
 
-        <!-- Hiển thị nút summart cart -->
-        <ngcart-summary class="js-show-cart" template-url="{{ asset('vendor/ngCart/template/summary.html') }}"></ngcart-summary>
 
-        <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
-            <i class="zmdi zmdi-favorite-outline"></i>
-        </a>
-    </div>
+    <li><a href="{{route('contact')}}">Liên hệ</a></li>
+
     <div class="text-end">
         @if (Route::has('login'))
         @auth
+        <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                <i class="fas fa-user-nurse text-white"></i>
+                <span class="text-white">{{Auth::user()->name}}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <!-- <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a> -->
+                <a class="dropdown-item" href="{{'logout'}}"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+            </div>
+        </li>
         @else
-        <div class="row">
-            <div class="col-md-3">
-                <div class="text-white">
-                    <li><a href="{{ route('login') }}" class="text-sm underline">Login</a></li>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="text-white">
-                    @if (Route::has('register'))
-                    <li><a href="{{ route('register') }}" class="text-sm underline">Register</a></li>
-                </div>
-            </div>
-            <!-- <div class="col-md-3">
-                <div class="text-white">
-                    <li> <a href="{{ route('logout') }}" class="text-sm underline">Logout</a></li>
-                </div>
-            </div> -->
-        </div>
+        <ul>
+            <li>
+                <a href="{{ route('login') }}" class="text-sm underline text-white">
+                    <i class="fas fa-user-plus"></i> Đăng nhập</a>
+            </li>
+            @if (Route::has('register'))
+            <li>
+                <a href="{{ route('register') }}" class="text-sm underline text-white">
+                    <i class="fas fa-external-link-alt"></i> Đăng ký
+                </a>
+            </li>
+        </ul>
         @endif
         @endauth
         @endif
-
     </div>
-    </ul>
-
 </nav>
