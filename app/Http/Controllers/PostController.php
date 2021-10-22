@@ -15,6 +15,12 @@ class PostController extends Controller
         $posts->load('category');
         return view('admin.posts.index', compact('posts'));
     }
+    public function show()
+    {
+        $posts = Post::paginate(10);
+        // $posts->load('category');
+        return view('news', compact('posts'));
+    }
     public function create()
     {
         $cates = Category::all();

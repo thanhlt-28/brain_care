@@ -5,7 +5,7 @@ namespace App\Helpers;
 class Helper
 {
 
-    public static function IDGenerator($model, $trow,  $length = 4, $prefix,)
+    public static function IDGenerator($model, $trow,  $length = 4, $prefix)
     {
         $data = $model::orderBy('id', 'desc')->first();
         if (!$data) {

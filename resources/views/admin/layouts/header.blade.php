@@ -154,13 +154,13 @@
                     <img src="{{asset('assets/img/admin.ico')}}" class="avatar img-fluid rounded mr-1" alt="user" /> <span class="text-dark">{{Auth::user()->name}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="pie-chart"></i> Analytics</a>
+                    <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Thông tin</a>
+                    <!-- <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="pie-chart"></i> Analytics</a> -->
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1" data-feather="settings"></i> Cài đặt</a> -->
+                    <!-- <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="help-circle"></i> Help Center</a> -->
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1" data-feather="settings"></i> Settings & Privacy</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="help-circle"></i> Help Center</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{'logout'}}">Log out</a>
+                    <a class="dropdown-item" href="{{'logout'}}">Đăng xuất</a>
                 </div>
             </li>
         </ul>

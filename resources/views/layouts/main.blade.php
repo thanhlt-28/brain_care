@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Braincare')</title>
+    <link rel="shortcut icon" href="assets/img/logo-new.png" type="image/png">
+    <title> @yield('title', 'Braincare')</title>
     @include('layouts.style')
 </head>
 

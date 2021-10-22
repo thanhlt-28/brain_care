@@ -21,12 +21,7 @@
                     <h2 class="mx-auto">{{$model->title}}</h2>
 
                     <p><img src="{{asset($model->image)}}" alt="" class="img-fluid"></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
-                    <h2 class="mb-3 mt-5">Molestiae cupiditate inventore animi, maxime sapiente optio</h2>
-
-                    <p>
-                        <img src="images/slider-1.jpg" alt="" class="img-fluid">
-                    </p>
+            
                     <p>{{$model->content}}</p>
 
                     <!-- <div class="tag-widget post-tag-container mb-5 mt-5">
@@ -52,7 +47,7 @@
                     </div>
                     <div class="sidebar-box">
                         <div class="categories">
-                            <h3>Categories</h3>
+                            <h3>Danh mục</h3>
                             <li><a href="#">Courses <span>(12)</span></a></li>
                             <li><a href="#">News <span>(22)</span></a></li>
                             <li><a href="#">Design <span>(37)</span></a></li>
@@ -60,12 +55,7 @@
                             <li><a href="#">Web Development <span>(14)</span></a></li>
                         </div>
                     </div>
-                    <div class="sidebar-box">
-                        <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4 rounded">
-                        <h3>About The Author</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                        <p><a href="#" class="btn btn-primary btn-lg">Read More</a></p>
-                    </div>
+                    
 
                     <div class="sidebar-box">
                         <h3>Tag Cloud</h3>
@@ -81,10 +71,10 @@
                         </div>
                     </div>
 
-                    <div class="sidebar-box">
+                    <!-- <div class="sidebar-box">
                         <h3>Paragraph</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

@@ -14,6 +14,12 @@ class FieldController extends Controller
         return view('admin.field.index', compact('fields'));
     }
 
+    // public function index()
+    // {
+    //     $fields = Field::paginate(3);
+    //     return view('layouts.ours', compact('fields'));
+    // }
+
     public function create()
     {
         return view('admin.field.add');

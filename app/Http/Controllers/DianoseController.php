@@ -98,11 +98,10 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('tram-cam.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy($id, $input)
+    public function destroy($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
-        return redirect(route('chan-doan.tram-cam.views'));
+        $model = Dianose::destroy($id);
+        return redirect(route('tram-cam.views'));
     }
 
     // =========== Nghiện rượu
@@ -147,10 +146,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('nghien-ruou.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_ngruou($id, $input)
+    public function destroy_ngruou($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('nghien-ruou.views'));
     }
 
@@ -196,10 +194,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('mat-tri.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_mattri($id, $input)
+    public function destroy_mattri($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('mat-tri.views'));
     }
 
@@ -245,10 +242,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('loan-than.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_lthan($id, $input)
+    public function destroy_lthan($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('loan-than.views'));
     }
 
@@ -296,8 +292,7 @@ class DianoseController extends Controller
     }
     public function destroy_loau($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('lo-au.views'));
     }
 
@@ -343,10 +338,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('hung-cam.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_hcam($id, $input)
+    public function destroy_hcam($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('hung-cam.views'));
     }
 
@@ -392,10 +386,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('hoang-loan.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_hloan($id, $input)
+    public function destroy_hloan($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('hoang-loan.views'));
     }
 
@@ -441,10 +434,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('dong-kinh.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_dongkinh($id, $input)
+    public function destroy_dongkinh($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('dong-kinh.views'));
     }
 
@@ -490,10 +482,9 @@ class DianoseController extends Controller
         $model->update($input);
         return redirect(route('am-anh.views', ['model' => $model, 'input' => $input]));
     }
-    public function destroy_amanh($id, $input)
+    public function destroy_amanh($id)
     {
-        $model = Dianose::findOrFail($id);
-        $model->delele();
+        $model = Dianose::destroy($id);
         return redirect(route('am-anh.views'));
     }
 

@@ -20,9 +20,9 @@
     <div class="templateux-section">
         <div class="container">
             <div class="row">
-                @foreach($posts as $item)
+                @foreach ($posts as $item)
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <a href="{{route('posts.details', $item->id)}}" class="block-thumbnail-1 one-whole show-text height-sm" style="background-image: url({{$item->image}}); " data-aos="fade" data-aos-delay="100">
+                    <a href="{{route('posts.details', $item->id)}}" class="block-thumbnail-1 one-whole show-text height-sm" style="background-image: url({{$item->image}}); " data-aos="fade" data-aos-delay="200">
                         <div class="block-thumbnail-content">
                             <h2 class="fw-bolder">{{$item->title}}</h2>
                             <p class="mt-2">{{$item->desc}}</p>
@@ -38,13 +38,12 @@
             <div class="row mt-5">
                 <div class="col-md-12 pt-5">
                     <ul class="pagination custom-pagination">
-                        <li class="page-item prev"><a class="page-link" href="#"><i class="icon-keyboard_arrow_left"></i></a></li>
-                        <li class="page-item active"><a class="page-linkx href=" #">1</a></li>
+                        <li class="page-item prev"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item next"><a class="page-link" href="#"><i class="icon-keyboard_arrow_right"></i></a></li>
+                        <li class="page-item next"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
                     </ul>
-
                 </div>
             </div>
         </div>

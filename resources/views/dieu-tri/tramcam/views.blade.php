@@ -187,37 +187,50 @@
                     <h4 class="t">Thông tin theo dõi</h4>
                 </div>
                 <div class="card-body">
-                    <table class="table">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Họ tên</th>
-                                <th>Số điện thoại</th>
-                                <th>Email</th>
-                                <th>Năm sinh</th>
-                                <th>Địa chỉ</th>
-                                <th>Kết quả</th>
-                                <th>
-                                    <a href="{{ route('tramcam.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($treat as $item)
-                            <tr>
-                                <td>{{ $item->treat_name }}</td>
-                                <td>{{ $item->treat_phone }}</td>
-                                <td>{{ $item->treat_email }}</td>
-                                <td>{{ $item->treat_dob }}</td>
-                                <td>{{ $item->treat_address }}</td>
-                                <td>{{ $item->result }}</td>
-                                <td>
-                                    <a class="btn btn-info" href="{{route('tramcam.index', $item->id)}}">Xem chi tiết</a>
-                                    <a class="btn btn-warning" href="{{route('tramcam.destroy', ['id' => $item->id])}}">Xóa</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="single-content brand webdesign grid-item">
+                        <input class="form-control-sm mb-2 dataTables_filter" id="myInput" type="text" placeholder="Tìm kiếm theo SĐT...">
+                        <script>
+                            $(document).ready(function() {
+                                $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+                        </script>
+                        <table class="table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Họ tên</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Năm sinh</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Kết quả</th>
+                                    <th>
+                                        <a href="{{ route('tramcam.create') }}" class="btn btn-success">Thêm chẩn đoán mới</a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($treat as $item)
+                                <tr>
+                                    <td>{{ $item->treat_name }}</td>
+                                    <td>{{ $item->treat_phone }}</td>
+                                    <td>{{ $item->treat_email }}</td>
+                                    <td>{{ $item->treat_dob }}</td>
+                                    <td>{{ $item->treat_address }}</td>
+                                    <td>{{ $item->result }}</td>
+                                    <td>
+                                        <a class="btn btn-info" href="{{route('tramcam.index', $item->id)}}">Xem chi tiết</a>
+                                        <a class="btn btn-warning" href="{{route('tramcam.destroy', ['id' => $item->id])}}">Xóa</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

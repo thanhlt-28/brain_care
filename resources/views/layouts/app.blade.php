@@ -1,31 +1,32 @@
 <div class="container">
     <div class="row text-center mb-5">
         <div class="col-12">
-            <h2>Happy Customers</h2>
+            <h2>&ldquo;Video sự kiện&rdquo;</h2>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-8 testimonial-wrap">
-            <div class="quote">&ldquo;</div>
+        <div class="col-md-10 testimonial-wrap">
+            <!-- <div class="quote">&ldquo;</div> -->
             <div class="owl-carousel wide-slider-testimonial">
+
                 <div class="item">
                     <blockquote class="block-testomonial">
-                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                        <p><cite>Drew Wilson, CEO and Founder of CoLab</cite></p>
+                        <iframe width="860" height="415" src="https://www.youtube.com/embed/ZKGHBRRyeLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p><cite>Giới thiệu về trung tâm chăm sóc sức khỏe tinh thần Braincare</cite></p>
                     </blockquote>
                 </div>
 
                 <div class="item">
                     <blockquote class="block-testomonial">
-                        <p>&ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.&rdquo;</p>
-                        <p><cite>Craig Smith, CEO and Founder of Slite</cite></p>
+                        <iframe width="860" height="415" src="https://www.youtube.com/embed/ljTVsZEJ6Pk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p><cite>Chuyên gia chia sẻ về trầm cảm học đường</cite></p>
                     </blockquote>
                 </div>
 
                 <div class="item">
                     <blockquote class="block-testomonial">
-                        <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-                        <p><cite>Bob Robe, CEO and Founder of Fixer</cite></p>
+                        <iframe width="860" height="415" src="https://www.youtube.com/embed/qq5xGzmH64M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p><cite>Chuyên gia chia sẻ về câu chuyện "Phát điên vì học"</cite></p>
                     </blockquote>
                 </div>
             </div>

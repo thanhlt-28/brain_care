@@ -56,13 +56,14 @@ Route::prefix('/')->group(function () {
     Route::get('gioi-thieu', function () {
         return view('about');
     })->name('about');
-    Route::get('tin-tuc', function () {
-        return view('news');
-    })->name('news');
-    Route::get('lien-he', function () {
-        return view('contact');
-    })->name('contact');
-
+    // Route::get('tin-tuc', function () {
+    //     return view('news');
+    // })->name('news');
+    // Route::get('tin-tuc', [PostController::class, 'show'])->name('news');
+    // Route::get('lien-he', function () {
+    //     return view('contact');
+    // })->name('contact');
+    
     Route::prefix('chan-doan')->group(function () {
         //........Trầm cảm
         Route::get('ket-qua-tram-cam', [DianoseController::class, 'index'])->name('tram-cam.views');
@@ -219,7 +220,7 @@ Route::prefix('/')->group(function () {
 
 Route::prefix('/admin')->middleware('check-admin-role')->group(function () {
     Route::get('/', function () {
-        return view('auth.dashboard');
+        return view('admin.dashboard');
     })->name('dashboard');
     Route::prefix('cates')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('cates.index');
@@ -281,6 +282,7 @@ Route::post('save', [DianoseController::class, 'store'])->name('store');
 // Route::post('save', [TreatmentController::class, 'stores'])->name('stores');
 Route::get('show', [DiaController::class, 'index']);
 Route::get('getallfields', [DiaController::class, 'getAllFields'])->name('getallfields');
+// Route::get('', [FieldController::class, 'index'])->name('layouts.ours');
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

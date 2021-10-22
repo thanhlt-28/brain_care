@@ -2,7 +2,7 @@
     <ul>
         <li><a href="{{route('home')}}">Trang chủ</a></li>
         <li><a href="{{route('about')}}">Giới thiệu</a></li>
-        <li><a href="#">Sản phẩm & Dịch vụ <i class="fas fa-chevron-down"></i></a>
+        <li><a href="#">Dịch vụ <i class="fas fa-chevron-down"></i></a>
             <!-- menu con sổ xuống cấp 1 -->
             <ul>
                 <li><a href="#">Nhóm F3</a>
@@ -94,15 +94,15 @@
         </li>
 
     </ul>
-    <li><a href="{{route('news')}}">Tin tức</a>
-        <ul>
-            <li><a href="{{route('getallfields')}}">Thực tập sinh chuyên đề</a></li>
+    <li><a href="https://braincare.vn/chuyen-muc/tin-tuc/" target="_blank">Tin tức</a>
+        <!-- <ul>
+            <li><a href="#">Thực tập sinh chuyên đề</a></li>
             <li><a href="#">Sản xuất phần mềm</a></li>
-        </ul>
+        </ul> -->
     </li>
 
 
-    <li><a href="{{route('contact')}}">Liên hệ</a></li>
+    <li><a href="https://braincare.vn/lien-he/" target="_blank">Liên hệ</a></li>
 
     <div class="text-end">
         @if (Route::has('login'))

@@ -68,6 +68,12 @@ class TreatmentController extends Controller
         return redirect(route('tramcam.views', ['model' => $model, 'input' => $input]));
     }
 
+    public function destroy($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('tramcam.views'));
+    }
+
     // ============= Nghiện rượu
     public function index_ngruou()
     {
@@ -105,6 +111,13 @@ class TreatmentController extends Controller
         return redirect(route('nghienruou.views', ['model' => $model, 'input' => $input]));
     }
 
+    public function destroy_ngruou($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('nghienruou.views'));
+    }
+
+
     //================ Mất trí
     public function index_mattri()
     {
@@ -140,6 +153,12 @@ class TreatmentController extends Controller
         $input['symptom'] = implode(", ", $input['symptom']);
         $model->update($input);
         return redirect(route('mattri.views', ['model' => $model, 'input' => $input]));
+    }
+
+    public function destroy_mattri($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('mattri.views'));
     }
 
 
@@ -179,6 +198,13 @@ class TreatmentController extends Controller
         $model->update($input);
         return redirect(route('loanthan.views', ['model' => $model, 'input' => $input]));
     }
+
+    public function destroy_loanthan($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('loanthan.views'));
+    }
+
     //================ Lo âu
     public function index_loau()
     {
@@ -216,6 +242,13 @@ class TreatmentController extends Controller
         return redirect(route('loau.views', ['model' => $model, 'input' => $input]));
     }
 
+    public function destroy_loau($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('loau.views'));
+    }
+
+
     //================ Hưng cảm
     public function index_hcam()
     {
@@ -252,6 +285,13 @@ class TreatmentController extends Controller
         $model->update($input);
         return redirect(route('hungcam.views', ['model' => $model, 'input' => $input]));
     }
+    public function destroy_hcam($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('hungcam.views'));
+    }
+
+
     //================ Hoảng loạn
     public function index_hloan()
     {
@@ -288,6 +328,12 @@ class TreatmentController extends Controller
         $model->update($input);
         return redirect(route('hoangloan.views', ['model' => $model, 'input' => $input]));
     }
+    public function destroy_hloan($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('hoangloan.views'));
+    }
+
     //================ Động kinh
     public function index_dkinh()
     {
@@ -324,6 +370,12 @@ class TreatmentController extends Controller
         $model->update($input);
         return redirect(route('dongkinh.views', ['model' => $model, 'input' => $input]));
     }
+    public function destroy_dkinh($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('dongkinh.views'));
+    }
+
     //================ Ám ảnh
     public function index_amanh()
     {
@@ -359,5 +411,10 @@ class TreatmentController extends Controller
         $input['symptom'] = implode(", ", $input['symptom']);
         $model->update($input);
         return redirect(route('amanh.views', ['model' => $model, 'input' => $input]));
+    }
+    public function destroy_amanh($id)
+    {
+        $model = Treatment::destroy($id);
+        return redirect(route('amanh.views'));
     }
 }

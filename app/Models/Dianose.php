@@ -15,4 +15,4 @@ class Dianose extends Model
     {
         return $this->hasMany(Prescription::class, 'CustID');
     }
-}
+} 
